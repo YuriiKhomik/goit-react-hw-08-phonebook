@@ -3,9 +3,9 @@ import {
   selectIsLoading,
   selectError,
   selectVisibleContacts,
-} from 'redux/selectors';
+} from 'redux/contacts/contactsSelectors';
 import { useEffect } from 'react';
-import { fetchContacts } from 'redux/operations';
+import { fetchContacts } from 'redux/contacts/contactsOperations';
 import { FaSpinner } from 'react-icons/fa';
 import { List } from './styled';
 import { ContactsListItem } from 'components/ContactsListItem';
