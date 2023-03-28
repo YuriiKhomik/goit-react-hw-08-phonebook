@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
 
-export const StyledNavBar = styled.nav`
+export const StyledNavBar = styled.header`
   top: 0;
   left: 0;
   right: 0;
@@ -16,7 +16,6 @@ export const StyledNavBar = styled.nav`
   padding-left: 24px;
   padding-top: 12px;
   padding-bottom: 12px;
-  color: #fff;
   background-color: #f4f4f0;
   border-bottom: 2px solid #d9e6cc;
 `;

@@ -7,7 +7,7 @@ import { StyledForm, Input } from './styled';
 
 const initialValues = {
   name: '',
-  phone: '',
+  number: '',
 };
 
 export const PhonebookForm = () => {

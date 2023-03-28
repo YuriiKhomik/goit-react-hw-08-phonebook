@@ -11,7 +11,7 @@ export const ContactsListItem = ({ item }) => {
     <li>
       <Box display="flex" alignItems="center">
         <Contact>
-          {item.name}: {item.phone}
+          {item.name}: {item.number}
         </Contact>
         <button type="button" onClick={handleDelete}>
           Delete
