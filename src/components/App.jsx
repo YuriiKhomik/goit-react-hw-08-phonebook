@@ -5,6 +5,7 @@ import { refreshUser } from 'redux/auth/authOperations';
 import { SharedLayout } from './SharedLayout';
 import Contacts from 'pages/Contacts';
 import { RestrictedRoute } from './RestrictedRoute';
+import { PrivataRoute } from './PrivateRoute';
 
 import { useAuth } from 'hooks';
 
@@ -36,7 +37,10 @@ export function App() {
           path="/login"
           element={<RestrictedRoute component={Login} redirectTo="/contacts" />}
         />
-        <Route path="/contacts" element={<Contacts />} />
+        <Route
+          path="/contacts"
+          element={<PrivataRoute component={Contacts} redirectTo="/login" />}
+        />
         <Route path="*" element={<Home />} />
       </Route>
     </Routes>
