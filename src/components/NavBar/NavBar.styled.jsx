@@ -31,11 +31,11 @@ export const StyledNavLink = styled(NavLink)`
   font-weight: 500;
 
   &:hover {
-    border: 1px solid red;
+    border: 1px solid #5865f2;
   }
 
   &.active {
     color: white;
-    background-color: #f5743d;
+    background-color: #5865f2;
   }
 `;
