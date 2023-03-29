@@ -1,4 +1,5 @@
 import { useDispatch } from 'react-redux';
+import { toast } from 'react-toastify';
 import { logIn } from 'redux/auth/authOperations';
 import css from './LoginForm.module.css';
 import { Field, Formik, Form } from 'formik';
@@ -14,8 +15,10 @@ export const LoginForm = () => {
   const dispatch = useDispatch();
 
   const handleSubmit = (values, { resetForm }) => {
+    if (values.password.trim() === '' || values.email.trim() === '') {
+      return toast.error('please, fill all filelds');
+    }
     dispatch(logIn(values));
-
     resetForm();
   };
 

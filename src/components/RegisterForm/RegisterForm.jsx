@@ -1,4 +1,5 @@
 import { useDispatch } from 'react-redux';
+import { toast } from 'react-toastify';
 import { register } from 'redux/auth/authOperations';
 import css from './RegisterForm.module.css';
 import { Field, Formik, Form } from 'formik';
@@ -15,6 +16,14 @@ export const RegisterForm = () => {
   const dispatch = useDispatch();
 
   const handleSubmit = (values, { resetForm }) => {
+    if (
+      values.name.trim() === '' ||
+      values.password.trim() === '' ||
+      values.email.trim() === ''
+    ) {
+      return toast.error('please, fill all filelds');
+    }
+
     dispatch(register(values));
     resetForm();
   };
