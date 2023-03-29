@@ -4,6 +4,7 @@ import { deleteContact } from 'redux/contacts/contactsOperations';
 import { Box } from 'components/Box';
 import { Contact } from 'components/ContactList/styled';
 import { StyledListItem } from './ContactsListItem.styled';
+import { DeleteButton } from 'components/Buttons/DeleteButton.styled';
 
 export const ContactsListItem = ({ item }) => {
   const dispatch = useDispatch();
@@ -13,9 +14,9 @@ export const ContactsListItem = ({ item }) => {
       <Contact>
         {item.name}: {item.number}
       </Contact>
-      <button type="button" onClick={handleDelete}>
-        Delete
-      </button>
+      <DeleteButton type="button" onClick={handleDelete}>
+        delete
+      </DeleteButton>
     </StyledListItem>
   );
 };

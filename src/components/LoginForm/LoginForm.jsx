@@ -3,7 +3,7 @@ import { logIn } from 'redux/auth/authOperations';
 import css from './LoginForm.module.css';
 import { Field, Formik, Form } from 'formik';
 import { Box } from 'components/Box';
-import { StyledButton } from 'components/Button';
+import { StyledButton } from 'components/Buttons';
 
 const initialValues = {
   email: '',
@@ -35,11 +35,11 @@ export const LoginForm = () => {
         >
           <label className={css.label} htmlFor="email">
             Email
-            <Field type="email" name="email" />
+            <Field type="email" name="email" className={css.formInput} />
           </label>
           <label className={css.label} htmlFor="password">
             Password
-            <Field type="password" name="password" />
+            <Field type="password" name="password" className={css.formInput} />
           </label>
           <Box textAlign="center">
             <StyledButton variant="contained" type="submit">

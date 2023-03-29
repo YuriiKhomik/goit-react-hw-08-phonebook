@@ -11,6 +11,7 @@ export const StyledButton = styled.button`
   padding: 2px 16px;
   height: 38px;
   min-width: 96px;
+  max-width: fit-content;
   min-height: 38px;
   border: none;
   color: #fff;

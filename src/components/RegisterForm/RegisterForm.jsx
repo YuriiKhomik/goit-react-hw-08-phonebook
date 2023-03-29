@@ -2,7 +2,7 @@ import { useDispatch } from 'react-redux';
 import { register } from 'redux/auth/authOperations';
 import css from './RegisterForm.module.css';
 import { Field, Formik, Form } from 'formik';
-import { StyledButton } from 'components/Button';
+import { StyledButton } from 'components/Buttons';
 import { Box } from 'components/Box';
 
 const initialValues = {
@@ -35,15 +35,15 @@ export const RegisterForm = () => {
         >
           <label className={css.label} htmlFor="name">
             Username
-            <Field type="text" name="name" />
+            <Field type="text" name="name" className={css.formInput} />
           </label>
           <label className={css.label} htmlFor="email">
             Email
-            <Field type="email" name="email" />
+            <Field type="email" name="email" className={css.formInput} />
           </label>
           <label className={css.label} htmlFor="password">
             Password
-            <Field type="password" name="password" />
+            <Field type="password" name="password" className={css.formInput} />
           </label>
           <Box textAlign="center">
             <StyledButton type="submit">Register</StyledButton>

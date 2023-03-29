@@ -1,6 +1,8 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { setContactsFilter } from 'redux/filter/filterSlice';
 import { selectFilter } from 'redux/filter/filterSelectors';
+import { StyledFilter } from './Filter.styled';
+import { StyledInput } from 'components/Inputs/Input.styled';
 
 export const Filter = () => {
   const value = useSelector(selectFilter);
@@ -11,9 +13,15 @@ export const Filter = () => {
   };
 
   return (
-    <>
-      <label htmlFor="filter">Find contacts by name</label>
-      <input type="text" value={value} onChange={changeFilter}></input>
-    </>
+    <StyledFilter>
+      <p>filter contacts by name</p>
+      <label htmlFor="filter">
+        <StyledInput
+          type="text"
+          value={value}
+          onChange={changeFilter}
+        ></StyledInput>
+      </label>
+    </StyledFilter>
   );
 };

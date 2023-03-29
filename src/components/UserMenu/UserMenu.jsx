@@ -1,7 +1,7 @@
 import { useDispatch } from 'react-redux';
 import { logOut } from 'redux/auth/authOperations';
 import { useAuth } from 'hooks';
-import { StyledButton } from 'components/Button';
+import { StyledButton } from 'components/Buttons';
 import { Box } from 'components/Box';
 
 export const UserMenu = () => {
