@@ -6,7 +6,6 @@ import { SharedLayout } from './SharedLayout';
 import Contacts from 'pages/Contacts';
 import { RestrictedRoute } from './RestrictedRoute';
 import { PrivataRoute } from './PrivateRoute';
-
 import { useAuth } from 'hooks';
 
 const Home = lazy(() => import('pages/Home'));

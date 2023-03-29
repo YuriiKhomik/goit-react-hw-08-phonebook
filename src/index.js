@@ -14,15 +14,15 @@ import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <ThemeProvider theme={theme}>
-    <React.StrictMode>
-      <Provider store={store}>
-        <BrowserRouter basename="goit-react-hw-08-phonebook">
-          <PersistGate loading={null} persistor={persistor}>
-            <App />
-          </PersistGate>
-        </BrowserRouter>
-      </Provider>
-    </React.StrictMode>
-  </ThemeProvider>
+  // <ThemeProvider theme={theme}>
+  <React.StrictMode>
+    <Provider store={store}>
+      <BrowserRouter basename="goit-react-hw-08-phonebook">
+        <PersistGate loading={null} persistor={persistor}>
+          <App />
+        </PersistGate>
+      </BrowserRouter>
+    </Provider>
+  </React.StrictMode>
+  // </ThemeProvider>
 );

@@ -1,4 +1,6 @@
-import React from 'react';
+import { Box } from 'components/Box';
+import { NavLink } from 'react-router-dom';
+import { useAuth } from 'hooks';
 
 const styles = {
   container: {
@@ -15,14 +17,35 @@ const styles = {
 };
 
 export default function Home() {
+  const { isLoggedIn, user } = useAuth();
   return (
-    <div style={styles.container}>
-      <h1 style={styles.title}>
-        Task manager welcome page{' '}
-        <span role="img" aria-label="Greeting icon">
-          💁‍♀️
-        </span>
-      </h1>
-    </div>
+    <Box
+      display="flex"
+      alignItems="center"
+      justifyContent="center"
+      flexDirection="column"
+      height="100%"
+    >
+      {!isLoggedIn ? (
+        <>
+          <h1 style={styles.title}>welcome to the phonebook app</h1>
+          <p>
+            Please, <NavLink to="/login">log in</NavLink> or{' '}
+            <NavLink to="/register">register</NavLink> to access your phonebook
+            and stay connected
+          </p>
+        </>
+      ) : (
+        <>
+          <h1 style={styles.title}>
+            {user.name}, this is your personal phonebook
+          </h1>
+          <p>
+            your contacts are located on{' '}
+            <NavLink to="/contacts"> contacts page</NavLink>
+          </p>
+        </>
+      )}
+    </Box>
   );
 }

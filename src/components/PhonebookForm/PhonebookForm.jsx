@@ -2,7 +2,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { addContact } from 'redux/contacts/contactsOperations';
 import { selectContacts } from 'redux/contacts/contactsSelectors';
 import { Formik } from 'formik';
-import { Button } from 'components/Button';
+import { StyledButton } from 'components/Button';
 import { StyledForm, Input } from './styled';
 
 const initialValues = {
@@ -41,7 +41,7 @@ export const PhonebookForm = () => {
           title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
           required
         />
-        <Button type="submit">Add contact</Button>
+        <StyledButton type="submit">Add contact</StyledButton>
       </StyledForm>
     </Formik>
   );

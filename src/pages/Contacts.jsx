@@ -5,12 +5,16 @@ import { Filter } from 'components/Filter';
 
 const Contacts = () => {
   return (
-    <Box p="4">
-      <h1>Phonebook</h1>
-      <PhonebookForm />
-      <h1>Contacts</h1>
-      <Filter />
-      <ContactList />
+    <Box display="flex" justifyContent="space-between">
+      <Box>
+        <Box mt="45px" mb="40px">
+          <PhonebookForm />
+        </Box>
+        <Filter />
+      </Box>
+      <Box mt="45px" ml="40px">
+        <ContactList />
+      </Box>
     </Box>
   );
 };

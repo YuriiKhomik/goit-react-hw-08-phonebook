@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from '@emotion/styled';
 import { NavLink } from 'react-router-dom';
 
 export const StyledNavBar = styled.header`
@@ -9,6 +9,7 @@ export const StyledNavBar = styled.header`
   z-index: 1100;
   box-sizing: border-box;
   display: flex;
+  justify-content: space-between;
   align-items: center;
   min-height: 64px;
   min-width: 100%;

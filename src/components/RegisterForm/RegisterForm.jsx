@@ -2,7 +2,8 @@ import { useDispatch } from 'react-redux';
 import { register } from 'redux/auth/authOperations';
 import css from './RegisterForm.module.css';
 import { Field, Formik, Form } from 'formik';
-import { Button } from 'components/Button';
+import { StyledButton } from 'components/Button';
+import { Box } from 'components/Box';
 
 const initialValues = {
   name: '',
@@ -19,22 +20,36 @@ export const RegisterForm = () => {
   };
 
   return (
-    <Formik initialValues={initialValues} onSubmit={handleSubmit}>
-      <Form className={css.form}>
-        <label className={css.label} htmlFor="name">
-          Username
-          <Field type="text" name="name" />
-        </label>
-        <label className={css.label} htmlFor="email">
-          Email
-          <Field type="email" name="email" />
-        </label>
-        <label className={css.label} htmlFor="password">
-          Password
-          <Field type="password" name="password" />
-        </label>
-        <Button type="submit">Register</Button>
-      </Form>
-    </Formik>
+    <Box
+      display="flex"
+      alignItems="center"
+      justifyContent="center"
+      height="100%"
+    >
+      <Formik initialValues={initialValues} onSubmit={handleSubmit}>
+        <Form
+          style={{
+            marginTop: '100px',
+          }}
+          className={css.form}
+        >
+          <label className={css.label} htmlFor="name">
+            Username
+            <Field type="text" name="name" />
+          </label>
+          <label className={css.label} htmlFor="email">
+            Email
+            <Field type="email" name="email" />
+          </label>
+          <label className={css.label} htmlFor="password">
+            Password
+            <Field type="password" name="password" />
+          </label>
+          <Box textAlign="center">
+            <StyledButton type="submit">Register</StyledButton>
+          </Box>
+        </Form>
+      </Formik>
+    </Box>
   );
 };

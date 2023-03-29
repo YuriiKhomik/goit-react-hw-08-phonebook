@@ -1,7 +1,7 @@
-import styled from 'styled-components';
+import styled from '@emotion/styled';
 
 export const Contact = styled.p`
-  margin-right: 40px;
+  margin-right: 20px;
   margin-bottom: 5px;
   margin-top: 5px;
 `;
